@@ -1,0 +1,31 @@
+<html>
+<head>
+	<script src="Controller/scripts/jquery.js"></script>
+	<script src="Controller/scripts/main.js">	</script>
+</head>
+<body>
+	
+<form id="formulario" class="login-form clearfix"
+						method="post" action="Controller/validar_usuario.php">
+	<fieldset>
+          
+<label for="username">ID <span class="ico">
+<img src="images/user.png" alt="Username Icon" border="0"></span>
+</label>
+            <input name="username" id="username" required=""  type="text">
+												
+<label for="password">Password <span class="ico">
+<img src="images/pass.png" alt="Password Icon" border="0" ></span>
+</label>
+            <input name="password" id="password" required="" autofocus="" type="password">
+	  <p class="form-response error"></p>
+	</fieldset>
+        <fieldset>
+	  <button id="login-btn" type="submit">&gt;&gt;&nbsp;&nbsp;&nbsp;</button>
+        </fieldset>
+         
+      </form>
+
+<script src="Controller/scripts/jquery.js"></script>
+ </body>     
+</html>
