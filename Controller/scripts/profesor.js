@@ -10,13 +10,13 @@ Profe.prototype.saludar = function() {
 
  if (this.genero === 'M') {
    prefijo = 'Sr.';
- } else if (this.gender === 'female' || this.gender === 'Female' || this.gender === 'f' || this.gender === 'F') {
+ } else if (this.genero === 'F') {
    prefijo = 'Sra.';
  } else {
    prefijo = 'Prof.';
  }
 
  alert('¡Hola! me llamo ' + prefijo + ' ' + this.nombre + '. Enseño:');
- for (i = 0; i < this.materias.length; i++)
- alert (this.materias[i]);
+ //for (i = 0; i < this.materias.length; i++)
+ //alert (this.materias[i]);
 };
