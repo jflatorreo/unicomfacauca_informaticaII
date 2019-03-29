@@ -12,9 +12,9 @@ function crear_persona(){
   materias=window.document.getElementById("materias").value;
 
   if (window.document.getElementById("rol").value == "P")
-  var Profesor = new Profe(nombre);
+  var Profesor = new Profe(nombre,edad,genero,materias);
   else
-  var Profesor = new Persona();
+  var Profesor = new Persona(nombre,edad,genero);
 
   Profesor.saludar();
 }
