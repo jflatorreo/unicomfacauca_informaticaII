@@ -16,7 +16,6 @@ Profe.prototype.saludar = function() {
    prefijo = 'Prof.';
  }
 
- alert('¡Hola! me llamo ' + prefijo + ' ' + this.nombre + '. Enseño:');
- //for (i = 0; i < this.materias.length; i++)
- //alert (this.materias[i]);
+ alert('¡Hola! me llamo ' + prefijo + ' ' + this.nombre + '. Enseño: '+this.materias+ ". Tengo "+edad+" años.");
+
 };

@@ -5,12 +5,27 @@
 <script src="../Controller/scripts/profesor.js"></script>
 <meta charset="utf-8">
 <script>
+function rol_selector(){
+
+}
 function crear_persona(){
   nombre=window.document.getElementById("nombre").value;
   edad=window.document.getElementById("edad").value;
   genero=window.document.getElementById("genero").value;
-  materias=window.document.getElementById("materias").value;
 
+  var materias_selector = document.getElementById( 'materias_selector' );
+
+  var materias = "";
+  var l = materias_selector.options.length;
+  for ( var i = 0; i < l; i++ )
+  {
+    var o = select.options[i];
+    if ( o.selected )
+      materias +=","+ o.text;
+
+    }
+  materias=materias.substring(1,materias.length)
+  
   if (window.document.getElementById("rol").value == "P")
   var Profesor = new Profe(nombre,edad,genero,materias);
   else
@@ -24,16 +39,31 @@ function crear_persona(){
 
 <body>
 
+Rol: <select id="rol" onchange="rol_selector()">
+        <option value="P">Profesor</option>
+        <option value="E">Estudiante</option>
+      </select> <br>
 
 Nombre: <input id="nombre" type="text"> </input> <br>
 
 Edad: <input id="edad" type="number"></input><br>
 
-Género: <input id="genero" type="text"> </input> <br>
+Género: <select id="genero">
+      <option value="M">Masculino</option>
+      <option value="F">Femenino</option>
+      </select> <br>
 
-Materias: <input id="materias" type="text"> </input> <br>
+Materias:
+<input id="materias" type="text" hidden> </input> <br>
+<select id="materias_selector" multiple="multiple">
+  <option value="1"> Informática I</option>
+  <option value="2"> Informática II</option>
+  <option value="3"> Sistemas Hidráulicos y Neumáticos</option>
+  <option value="4"> Investigación de operaciones</option>
+  <option value="5"> Metrología, instrumentación y control</option>
+</select><br>
 
-Rol: <input id="rol" type="text"> </input> <br>
+
 
 <button onclick="crear_persona()"> Crear </button>
 
