@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+
+<script src="../Controller/scripts/persona.js"></script>
+<script src="../Controller/scripts/profesor.js"></script>
+<script>
+function crear_persona(){
+  nombre=window.document.getElementById("nombre").value;
+  edad=window.document.getElementById("edad").value;
+  genero=window.document.getElementById("genero").value;
+  materias=window.document.getElementById("materias").value;
+
+  if (window.document.getElementById("rol").value == "P")
+  var Profesor = new Profe(nombre);
+  else
+  var Profesor = new Persona();
+
+  Profesor.saludar();
+}
+
+</script>
+</HEAD>
+
+<body>
+
+
+Nombre: <input id="nombre" type="text"> </input> <br>
+
+Edad: <input id="edad" type="number"></input><br>
+
+Género: <input id="genero" type="text"> </input> <br>
+
+Materias: <input id="materias" type="text"> </input> <br>
+
+Rol: <input id="rol" type="text"> </input> <br>
+
+<button onclick="crear_persona()"> Crear </button>
+
+<div id="resultado">
+
+</div>
+</body>
+</HTML>
